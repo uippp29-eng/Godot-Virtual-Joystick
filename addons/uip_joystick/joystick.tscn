@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://ewgge3sx1riw"]
+
+[ext_resource type="Script" uid="uid://cdd4oltne0x65" path="res://addons/uip_joystick/joystick.gd" id="1_w25ul"]
+[ext_resource type="Texture2D" uid="uid://cmcfqo1gn4d41" path="res://icon.svg" id="2_dm1l1"]
+
+[node name="joystick" type="Control" unique_id=1446823300]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+offset_right = 300.0
+grow_vertical = 0
+script = ExtResource("1_w25ul")
+joystick_mode = 2
+visibility_mode = 1
+base_texture = ExtResource("2_dm1l1")
+knob_texture = ExtResource("2_dm1l1")
+action_left = "ui_left"
+action_right = "ui_right"
+action_up = "ui_up"
+action_down = "ui_down"
+deadzone_percent = 0.05
+max_distance_percent = 0.4
+
+[node name="Base" type="TextureRect" parent="." unique_id=585045283]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dm1l1")
+
+[node name="Knob" type="TextureRect" parent="Base" unique_id=1772207192]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dm1l1")
